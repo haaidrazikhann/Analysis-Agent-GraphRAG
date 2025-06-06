@@ -1,12 +1,11 @@
 from neo4j import GraphDatabase
-import csv
-from google.colab import userdata
+import os
 import pandas as pd
 
 # Neo4j connection settings
-URI = userdata.get("NEO4J_URI")
-USERNAME = userdata.get("NEO4J_USERNAME")
-PASSWORD = userdata.get("NEO4J_PASSWORD")
+URI = os.getenv("NEO4J_URI")
+USERNAME = os.getenv("NEO4J_USERNAME")
+PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 CSV_FILE = "data.csv"
 
